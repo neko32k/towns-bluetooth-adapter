@@ -1,0 +1,125 @@
+(footprint "COMMON_HOLE"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "20-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils)")
+	(tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil")
+	(property "Reference" "REF**"
+		(at 2.032 6.35 180)
+		(layer "F.SilkS")
+		(uuid "32114978-6216-4c29-96ff-68fbb80ad6e7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "COMMON"
+		(at -2.794 4.572 270)
+		(layer "F.Fab")
+		(uuid "74f25ae0-395a-40b6-9884-b5d64ee9dbf8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at -19.19 1.33 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3041fa3b-dc98-405f-8682-01c2683ee3e6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at -19.19 1.33 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "eef09264-8835-494d-9ebc-374d813cb422")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -1.778 3.4)
+		(end -1.778 5.9)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9d068d55-261f-423b-9485-f793b92c6f60")
+	)
+	(fp_line
+		(start -1.778 5.9)
+		(end 5.94 5.9)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a8bf154c-62e9-4027-ada4-7a0e02018102")
+	)
+	(fp_line
+		(start 5.94 3.4)
+		(end -1.778 3.4)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "aa49435e-c8ae-4c40-a154-d2af19c49bd5")
+	)
+	(fp_line
+		(start 5.94 5.9)
+		(end 5.94 3.4)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b3b7fd67-82a9-4e4c-921d-5078072a52e7")
+	)
+	(pad "1" thru_hole circle
+		(at 4.61 4.67 270)
+		(size 1.6 1.6)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "2dc9fa61-ba7c-4544-88c1-1b0d2a2b1932")
+	)
+	(pad "2" thru_hole circle
+		(at -0.47 4.67 270)
+		(size 1.6 1.6)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "fdc2c638-d2e4-45e7-9bf7-da85f9d53307")
+	)
+	(embedded_fonts no)
+	(model "${KICAD8_3DMODEL_DIR}/Package_DIP.3dshapes/DIP-20_W7.62mm.wrl"
+		(offset
+			(xyz -19.19 -1.33 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,86 @@
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# editor swap / temp
+*~
+*.swp
+*.swo
+*.tmp
+
+# IDE / editor settings
+.vscode/
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+
+# Node / misc
+node_modules/
+coverage/
+
+# Build artifacts (Arduino / PlatformIO / generic)
+build/                 # Arduino IDE build folder (local)
+dist/
+release/
+artifacts/
+*.hex
+*.elf
+*.bin
+*.uf2
+*.map
+*.o
+*.a
+*.out
+*.log
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Arduino user config / local files
+.arduino/
+.arduino15/
+
+# KiCad
+# Keep source files (.kicad_pcb, .kicad_sch, .kicad_pro) tracked.
+# Ignore backups, caches, and generated outputs.
+# KiCad backups / generated
+*/*-backups/
+*-backups/
+*.bak
+*.cache
+*.lck
+fp-info-cache
+fp-info-cache*
+fp-lib-table
+sym-lib-table
+sym-lib-table.*
+.kicad/
+
+# KiCad generated fabrication output (gerbers/plots) – ignore unless you explicitly want to track them
+/fabrication/
+/gerbers/
+/plots/
+/gerber-export-*/
+
+# Vendor libraries (if you vendor libraries, DO NOT ignore their folder)
+# Example: keep /firmware/lib or /licenses if you intentionally vendored code.
+# /firmware/lib/
+# /licenses/
+
+# Secrets / keys / environment
+*.pem
+*.key
+*.crt
+*.asc
+.env
+.env.local
+.env.*.local
+secrets/
+credentials/
+
+# Misc
+*.log
+*.tmp

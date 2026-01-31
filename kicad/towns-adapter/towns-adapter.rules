@@ -1,0 +1,102 @@
+
+(rules PCB towns-adapter
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 68579)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.4)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.7)
+    )
+  )
+  (rule
+    (width 200.0)
+    (clearance 200.0)
+    (clearance 100.0 (type smd_to_turn_gap))
+    (clearance 200.0 (type smd))
+    (clearance 200.0 (type "kicad_default"))
+    (clearance 200.0 (type power))
+    (clearance 200.0 (type kicad))
+  )
+  (padstack "Via[0-1]_600:300_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_600:300_um-power" "Via[0-1]_600:300_um" power
+  )
+  (via 
+    "Via[0-1]_600:300_um" "Via[0-1]_600:300_um" default
+  )
+  (via 
+    "Via[0-1]_600:300_um-kicad_default" "Via[0-1]_600:300_um" "kicad_default"
+  )
+  (via_rule
+    power "Via[0-1]_600:300_um-power"
+  )
+  (via_rule
+    default "Via[0-1]_600:300_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_600:300_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(U9-VIN)" /CTRL /RX /D5 "/M1_COM" "/M2_COM" /SDA /KSD
+    "/M1_RIGHT" "/M1_TRIG1" "/M1_FWD" "/M1_LEFT" "/M1_BACK" "unconnected-(U4-PIN25-Pad25)" "/M1_TRIG2" "/M2_TRIG2"
+    "/M2_LEFT" "/M2_FWD" "/M2_BACK" "/M2_TRIG1" "/M2_RIGHT" /D6 /D10 /TX
+    /D9 /A0 /D11 /D13 /D12 /A1 /A4 /A2
+    GND /A3 "unconnected-(U8-4OE-Pad13)" /A5 "unconnected-(U8-2Y-Pad6)" "unconnected-(U8-2OE-Pad4)" "unconnected-(U8-3OE-Pad10)" "unconnected-(U8-4Y-Pad11)"
+    "unconnected-(U8-3Y-Pad8)" "unconnected-(U10-MI-Pad13)" "unconnected-(U10-Rst-Pad1)" "unconnected-(U10-SCK-Pad11)" "unconnected-(U10-SCL-Pad18)" "unconnected-(U10-MO-Pad12)" "unconnected-(U10-D2-Pad16)" "unconnected-(U10-Bat-Pad28)"
+    "unconnected-(U10-3V-Pad2)" "unconnected-(U10-Aref-Pad3)" "unconnected-(U10-En-Pad27)"
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class power
+    "/VCC_KB_5V" "/VCC_5V"
+    (clearance_class power)
+    (via_rule power)
+    (rule
+      (width 100.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
